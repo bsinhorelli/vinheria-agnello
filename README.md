@@ -1,5 +1,10 @@
 # vinheria-agnello
 
+## Membros do grupo
+- Bruno Sinhorelli - 574415
+- Diógenes Costa - 559127
+- Roberto Felipe - 575266
+
 ├── index.html                   # Página inicial
 ├── README.md                    # Documentação
 └── src/
