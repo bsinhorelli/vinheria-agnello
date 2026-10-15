@@ -1,21 +1,25 @@
 /* ===== Pseudo-classes ===== */
 
+/* link do menu fica branco ao passar o mouse */
 header nav ul li a:hover {
     color: #ffffff;
 }
 
+/* botao fica dourado com brilho ao passar o mouse  */
 .btn:hover {
     background-color: #c5a880;
     color: #000;
     box-shadow: 0 0 15px rgba(197, 168, 128, 0.4);
 }
 
+/* contorno dourado em links e botoes ao navegar com Tab  */
 header nav ul li a:focus-visible, 
 .btn:focus-visible {
     outline: 2px solid #c5a880;
     outline-offset: 4px;
 }
 
+/* ponto separador depois de cada item do menu, menos o ultimo */
 header nav ul li:not(:last-child)::after {
     content: "·";
     color: #6f5b3f;
@@ -25,6 +29,21 @@ header nav ul li:not(:last-child)::after {
 
 /* ===== Pseudo-elementos ===== */
 
+/* traço dourado fino e curto abaixo do nome */
+.vinhos-catalogo h3::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: #c5a880;
+    margin: 12px auto 0;
+}
+
+/* primeira letra grande e dourada somente na descrição dos vinhos no index */
+.vinhos-catalogo p:not(.notas-vinhos)::first-letter {
+    font-size: 2rem;
+    color: #c5a880;
+}
 /* ===== Animações ===== */
 
 /* ===== Transformações ===== */
