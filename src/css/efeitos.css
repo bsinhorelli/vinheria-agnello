@@ -1,0 +1,36 @@
+/* ===== Pseudo-classes ===== */
+
+header nav ul li a:hover {
+    color: #ffffff;
+}
+
+.btn:hover {
+    background-color: #c5a880;
+    color: #000;
+    box-shadow: 0 0 15px rgba(197, 168, 128, 0.4);
+}
+
+header nav ul li a:focus-visible, 
+.btn:focus-visible {
+    outline: 2px solid #c5a880;
+    outline-offset: 4px;
+}
+
+header nav ul li:not(:last-child)::after {
+    content: "·";
+    color: #6f5b3f;
+    margin-left: 20px;
+}
+
+
+/* ===== Pseudo-elementos ===== */
+
+/* ===== Animações ===== */
+
+/* ===== Transformações ===== */
+
+/* ===== Transições ===== */
+
+.btn {
+    transition: all 0.3s ease;
+}
