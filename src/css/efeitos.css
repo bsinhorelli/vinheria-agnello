@@ -44,12 +44,60 @@ header nav ul li:not(:last-child)::after {
     font-size: 2rem;
     color: #c5a880;
 }
+
 /* ===== Animações ===== */
 
-/* ===== Transformações ===== */
+/* define a animação "entrada": começa invisível e 30px mais baixo, termina visível no lugar */
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-/* ===== Transições ===== */
+/* aplica a animação "entrada" em cada card de vinho ao carregar a página */
+.vinhos-catalogo {
+    animation: entrada 0.8s ease-out backwards;
+}
 
+/* atraso por coluna (3 cards por linha): 2º, 5º, 8º... entram depois do 1º */
+.vinhos-catalogo:nth-child(3n + 2) {
+    animation-delay: 0.2s;
+}
+
+/* 3º, 6º, 9º... entram por último, criando efeito cascata */
+.vinhos-catalogo:nth-child(3n + 3) {
+    animation-delay: 0.4s;
+}
+
+
+/* ===== Transformações e Transições ===== */
+
+/* transição: suaviza a mudança de cor e sombra do botão no hover */
 .btn {
     transition: all 0.3s ease;
+}
+
+/* transição: prepara o card para subir suavemente no hover */
+.vinhos-catalogo {
+    transition: transform 0.4s ease;
+}
+
+/* transformação translateY(): card sobe 8px ao passar o mouse */
+.vinhos-catalogo:hover {
+    transform: translateY(-8px);
+}
+
+/* transição: prepara a imagem para aumentar suavemente no hover */
+.vinhos-catalogo img {
+    transition: transform 0.5s ease;
+}
+
+/* transformação scale(): imagem aumenta 5% quando o mouse passa sobre o card */
+.vinhos-catalogo:hover img {
+    transform: scale(1.05);
 }
