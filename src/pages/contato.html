@@ -30,9 +30,82 @@
         </nav>
     </header>
     <main>
-        <h1>CONTATO</h1>
-        <section>
-
+        <!--############ Seção de Contato Pós-Venda ############-->
+        <section id="contato_direto">
+            <h1>Contate-nos</h1>
+            <img src="../assets/img/sommelier-cliente.jpg" alt="Atendimento no Balcão Loja">
+        
+            <h2>Em caso de necessidade de suporte com vinhos comprados conosco entre em contato via:</h2>
+            <ul>
+                <li>Email: <a href="mailto:contato@vinhariaagnello.com"> contato@vinhariaagnello.com</a></li>
+                <li>Telefone <a href="tel:11999999999">(11) 99999-9999</a></li>
+            </ul>
+        </section>
+        
+        <!--############ Seção de contato pré-venda ############-->
+        <section id="contato_pre-venda">
+            <h2>Para orçamentos, e recomendações de vinho preencha o formulário com seus dados e sua solicitação.</h2>
+        
+            <form action="/enviar" method="POST">
+        
+                <!--Nome Formulario-->
+                <label for="nome">Nome Completo</label>
+        
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui">
+        
+        
+        
+                <!-- 1. Email Formulario-->
+                <label for="email">Email</label>
+        
+                <input type="email" id="email" name="email" placeholder="Digite seu email aqui">
+        
+        
+                <!--2. Numero Formulario-->
+                <label for="tel">Telefone</label>
+        
+                <input type="tel" id="tel" name="tel" placeholder="Digite seu telefone aqui">
+        
+        
+                <!-- 3. Solicitação orçamento/recomendação -->
+                <label for="solicit">Explique o que precisa, qual tipo de vinho ou ocasião:</label>
+                <textarea id="solicit" name="solicit" rows="10"
+                    placeholder="Digite aqui de qual tipo de vinho você precisa ou para qual ocasião você precisa e recomendaremos para você um vinho ou enviaremos o orçamento."></textarea>
+        
+                <button type="submit">Enviar solicitação</button>
+            </form>
+        </section>
+        
+        
+        <!-- ############ SEÇÃO DE PERGUNTAS FREQUENTES ############-->
+        <section id="FAQ">
+            <h2>Perguntas frequentes (FAQ)</h2>
+            <h3>Qual o prazo de entrega?</h3>
+            <table>
+                <tr>
+                    <th>Região</th>
+                    <th>Prazo de entrega</th>
+                </tr>
+                <tr>
+                    <td>Capital SP</td>
+                    <td>2 a 3 dias úteis</td>
+                </tr>
+                <tr>
+                    <td>Grande SP</td>
+                    <td>3 a 4 dias úteis</td>
+                </tr>
+                <tr>
+                    <td>Outros estados</td>
+                    <td>4 a 5 dias úteis</td>
+                </tr>
+            </table>
+        
+            <h3>Quais são as condições para trocar ou devolver um produto?</h3>
+            <p>Todos os pedidos de troca ou devolução em nosso site poderão ser solicitados de acordo com os prazos e
+                condições
+                previstos no CDC, Código do Consumidor, desde que atendam os seguintes critérios. Não ter sido aberto
+                ou consumido.
+                Estar acompanhado da Nota Fiscal ou comprovante de compra.</p>
         </section>
     </main>
 
