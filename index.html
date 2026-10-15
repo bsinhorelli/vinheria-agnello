@@ -9,34 +9,81 @@
 </head>
 <body>
     <header>
+        <h1>VINHARIA AGNELLO</h1>
         <nav>
-            <ol>
+            <ul>
                 <li>
-                    <p>INICIO</p>
+                    <a href="#">INICIO</a>
                 </li>
                 <li>
-                    <p>SOBRE NÓS</p>
+                    <a href="src/pages/sobre.html">SOBRE NÓS</a>
                 </li>
                 <li>
-                    <p>CONTATO</p>
+                    <a href="src/pages/contato.html">CONTATO</a>
                 </li>
                 <li>
-                    <p>GALERIA</p>
+                    <a href="src/pages/galeria.html">GALERIA</a>
                 </li>
                 <li>
-                    <p>PRODUTOS</p>
+                    <a href="src/pages/produtos.html">PRODUTOS</a>
                 </li>
-            </ol>
+            </ul>
         </nav>
     </header>
     <main>
-        <section>
+        <section class="video">
+            <video autoplay loop muted>
+                <source src="./src/assets/videos/video-apresentacao-agnello.mp4" alt="video demosntrativo vinheria" srcset="">
+            </video>
+            <a href="src/pages/galeria.html" class="btn">VER CATALOGO</a>
+        </section>
 
+        <h2>3 VINHOS MAIS RECOMENDADOS POR NOSSOS SOMMELIERS</h2>
+        
+        <section class="catalogo">
+            <div class="vinhos-catalogo">
+                <img src="src/assets/img/vinho-petrus.jpg" alt="vinho Pétrus">
+                <p class="notas-vinhos">Pomerol · França · 2015</p>
+                <h3>Pétrus</h3>
+                <p>
+                    O vinho mais lendário de Pomerol. Elaborado
+                    quase exclusivamente com Merlot, apresenta
+                    nota de trufas, ameixas maduras e especiarias
+                    raras. Estrutura monumental e final eterno.
+                </p>
+                <p class="notas-vinhos">R$ 28.000</p>
+            </div>
+            
+            <div class="vinhos-catalogo">
+                <img src="src/assets/img/vinho-sassicaia.jpg" alt="vinho Sassicaia">
+                <p class="notas-vinhos">Toscana · Itália · 2016</p>
+                <h3>Sassicaia</h3>
+                <p>
+                    O precursor dos Super Tuscans. Blend de
+                    Cabernet Sauvignon e Cabernet Franc revela
+                    cassis, tabaco, cedro e violeta. Elegância
+                    italiana em sua expressão máxima.
+                </p>
+                <p class="notas-vinhos">R$ 4.800</p>
+            </div>
+            
+            <div class="vinhos-catalogo">
+                <img src="src/assets/img/vinho-opus-one.jpg" alt="vinho Opus One">
+                <p class="notas-vinhos">Napa Valley · EUA · 2018</p>
+                <h3>Opus One</h3>
+                <p>
+                    Fruto da parceria entre Robert Mondavi e
+                    Baron Philippe de Rothschild. Cabernet
+                    Sauvignon de inigualável complexidade:
+                    chocolate amargo, mirtilo e sândalo.
+                </p>
+                <p class="notas-vinhos">R$ 3.200</p>
+            </div>
         </section>
     </main>
 
     <footer>
-        © 2026 Vinharia Agnello.
+        <p>Vinheria Agnello ® 2026 CNPJ: XX.XXX.XXX/XXXX-XX</p>
     </footer>
 </body>
 </html>
