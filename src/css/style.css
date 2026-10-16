@@ -161,6 +161,16 @@ h1 {
     text-align: left;
 }
 
+/* traço dourado curto abaixo do título de cada página */
+main > h1::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: #c5a880;
+    margin-top: 12px;
+}
+
 h2 {
     font-size: 1.8rem;
     font-weight: 400;
@@ -354,4 +364,179 @@ footer {
 .expansao-digital h2 {
     margin: 50px;
 
+}
+
+
+/* configurações da pagina de contato */
+
+.contato {
+    font-family: "Cormorant Garamond", Garamond, Baskerville, "Times New Roman", serif;
+}
+
+.contato h1 {
+    margin: 30px 40px 40px 40px;
+    font-size: 3rem;
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    padding: 0 40px;
+    align-items: start;
+}
+
+.contato h2 {
+    text-align: left;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+
+/* coluna esquerda: contato direto */
+#contato_direto img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+}
+
+#contato_direto ul {
+    margin-top: 25px;
+}
+
+#contato_direto li {
+    padding: 15px 0;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+#contato_direto li:last-child {
+    border-bottom: 0;
+}
+
+#contato_direto li span {
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    color: #a0a0a0;
+    margin-bottom: 8px;
+}
+
+#contato_direto li a {
+    color: #c5a880;
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+/* coluna direita: formulário */
+#contato_pre-venda h2 {
+    margin-bottom: 25px;
+}
+
+#contato_pre-venda form {
+    display: flex;
+    flex-direction: column;
+}
+
+#contato_pre-venda label {
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    color: #e0e0e0;
+    margin: 18px 0 8px 0;
+}
+
+#contato_pre-venda input,
+#contato_pre-venda textarea {
+    background-color: #0C0C0B;
+    color: #ffffff;
+    border: 1px solid #1f1f1f;
+    padding: 16px;
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+#contato_pre-venda ::placeholder {
+    color: #8a8a8a;
+}
+
+#contato_pre-venda button {
+    margin-top: 20px;
+    background-color: #2a1d0e;
+    color: #c5a880;
+    border: 1px solid #6f5b3f;
+    padding: 16px;
+    font-family: inherit;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+/* FAQ: faixa mais clara de ponta a ponta */
+#FAQ {
+    background-color: #0C0C0B;
+    margin-top: 60px;
+    padding: 50px 40px;
+}
+
+#FAQ h2 {
+    font-size: 2rem;
+    margin-bottom: 35px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 40px;
+    align-items: start;
+}
+
+#FAQ h3 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+#FAQ table {
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 0.75rem;
+    border: 1px solid #1f1f1f;
+}
+
+#FAQ th,
+#FAQ td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+#FAQ th {
+    color: #c5a880;
+    background-color: #15120c;
+}
+
+#FAQ p {
+    line-height: 1.7;
+    font-size: 1.1rem;
+    color: #c8b99a;
+}
+
+/* telas pequenas: colunas empilhadas */
+@media (max-width: 800px) {
+
+    .contato-grid,
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* configurações da pagina de galeria */
+.galeria h1,
+.galeria figcaption {
+    color: #c5a880;
 }
