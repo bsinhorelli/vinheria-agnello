@@ -108,3 +108,42 @@ header nav ul li:not(:last-child)::after {
 .img-catalogo:hover {
     transform: scale(1.05);
 }
+
+/* ===== Página de contato ===== */
+
+/* transição suave nos campos do formulário e no botão */
+#contato_pre-venda input,
+#contato_pre-venda textarea,
+#contato_pre-venda button,
+#contato_direto a {
+    transition: all 0.3s ease;
+}
+
+/* campo ganha borda dourada e brilho ao receber foco */
+#contato_pre-venda input:focus,
+#contato_pre-venda textarea:focus {
+    outline: none;
+    border-color: #c5a880;
+    box-shadow: 0 0 10px rgba(197, 168, 128, 0.3);
+}
+
+/* botão do formulário igual ao .btn no hover */
+#contato_pre-venda button:hover {
+    background-color: #c5a880;
+    color: #000;
+    box-shadow: 0 0 15px rgba(197, 168, 128, 0.4);
+}
+
+#contato_pre-venda button:focus-visible {
+    outline: 2px solid #c5a880;
+    outline-offset: 4px;
+}
+
+#contato_direto a:hover {
+    color: #ffffff;
+}
+
+/* linhas da tabela do FAQ destacam no hover */
+#FAQ tr:hover td {
+    background-color: #15120c;
+}
