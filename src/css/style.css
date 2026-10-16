@@ -142,11 +142,6 @@ table {
 
 
 /* configurações gerais */
-::selection {
-    background-color: #3E1C00;
-    color: #ffffff;
-}
-
 body {
     background-color: #000;
     color: #ffffff;
@@ -154,21 +149,11 @@ body {
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 400;
     letter-spacing: 2px;
-    margin: 30px;
+    margin: 30px 40px 40px 40px;
     text-align: left;
-}
-
-/* traço dourado curto abaixo do título de cada página */
-main > h1::after {
-    content: "";
-    display: block;
-    width: 40px;
-    height: 1px;
-    background-color: #c5a880;
-    margin-top: 12px;
 }
 
 h2 {
@@ -215,7 +200,6 @@ header nav ul li a {
     font-family: Arial, sans-serif;
     font-size: 0.9rem;
     letter-spacing: 1px;
-    transition: color 0.3s ease;
 }
 
 figcaption {
@@ -248,7 +232,6 @@ figcaption {
     position: absolute;
     top: 80%;
     left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 
@@ -314,68 +297,99 @@ footer {
 
 /* configurações da pagina sobre */
 
+.sobre-nos {
+    font-family: Garamond, Baskerville, "Times New Roman", serif;
+}
 
 .sobre-nos h2 {
     text-align: left;
-    margin-bottom: 50px;
+    font-size: 1.8rem;
 }
 
+/* imagem à esquerda, texto à direita */
 .quem-somos {
-
-    margin: 30px;
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr) 2fr;
+    gap: 40px;
     align-items: center;
+    padding: 0 40px;
     text-align: left;
-    gap: 20px;
-    position: relative;
 }
 
 .quem-somos img {
-    margin-left: 10px;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.quem-somos figcaption {
+    font-family: Arial, sans-serif;
+    font-size: 0.6rem;
+    font-style: normal;
+    color: #a0a0a0;
+    margin-top: 10px;
 }
 
 .quem-somos p {
-    position: absolute;
-    top: 50%;
-    left: 40%;
+    line-height: 1.7;
+    font-size: 1.1rem;
+    color: #c8b99a;
 }
 
+/* faixa mais clara de ponta a ponta */
 .porque-escolher {
     background-color: #0C0C0B;
-    padding: 8vh;
-    margin: 30px 0px;
+    padding: 40px;
+    margin: 60px 0;
+}
+
+.porque-escolher h2 {
+    margin-bottom: 30px;
 }
 
 .porque-escolher ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
     text-align: left;
     color: #C8B99A;
-    gap: 30px;
-    display: flex;
-    flex: 1 1 300px;
+}
+
+.porque-escolher li {
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 .expansao-digital {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 40px;
+    align-items: start;
+    padding: 0 40px;
     text-align: left;
-    gap: 30px;
 }
 
-.expansao-digital h2 {
-    margin: 50px;
+.expansao-digital p {
+    line-height: 1.7;
+    font-size: 1.1rem;
+    color: #c8b99a;
+}
 
+/* telas pequenas: colunas empilhadas */
+@media (max-width: 800px) {
+
+    .quem-somos,
+    .porque-escolher ul,
+    .expansao-digital {
+        grid-template-columns: 1fr;
+    }
 }
 
 
 /* configurações da pagina de contato */
 
 .contato {
-    font-family: "Cormorant Garamond", Garamond, Baskerville, "Times New Roman", serif;
-}
-
-.contato h1 {
-    margin: 30px 40px 40px 40px;
-    font-size: 3rem;
+    font-family: Garamond, Baskerville, "Times New Roman", serif;
 }
 
 .contato-grid {
@@ -408,10 +422,6 @@ footer {
 #contato_direto li {
     padding: 15px 0;
     border-bottom: 1px solid #1f1f1f;
-}
-
-#contato_direto li:last-child {
-    border-bottom: 0;
 }
 
 #contato_direto li span {
@@ -456,10 +466,6 @@ footer {
     width: 100%;
     box-sizing: border-box;
     resize: vertical;
-}
-
-#contato_pre-venda ::placeholder {
-    color: #8a8a8a;
 }
 
 #contato_pre-venda button {
@@ -536,7 +542,6 @@ footer {
 
 
 /* configurações da pagina de galeria */
-.galeria h1,
 .galeria figcaption {
     color: #c5a880;
 }

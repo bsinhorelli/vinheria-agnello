@@ -147,3 +147,54 @@ header nav ul li:not(:last-child)::after {
 #FAQ tr:hover td {
     background-color: #15120c;
 }
+
+
+/* ===== Movidos do style.css ===== */
+
+/* cor do texto selecionado */
+::selection {
+    background-color: #3E1C00;
+    color: #ffffff;
+}
+
+/* transição: suaviza a mudança de cor dos links do menu */
+header nav ul li a {
+    transition: color 0.3s ease;
+}
+
+/* transformação translate(): centraliza o botão do vídeo no ponto indicado por top/left */
+.video .btn {
+    transform: translate(-50%, -50%);
+}
+
+/* traço dourado curto abaixo do título de cada página e do título Expansão Digital */
+main > h1::after,
+.expansao-digital h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: #c5a880;
+    margin-top: 12px;
+}
+
+/* traço dourado curto acima do texto */
+.quem-somos p::before,
+.porque-escolher li::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: #c5a880;
+    margin-bottom: 20px;
+}
+
+/* último item da lista de contato sem linha embaixo */
+#contato_direto li:last-child {
+    border-bottom: 0;
+}
+
+/* cor do texto de exemplo dos campos */
+#contato_pre-venda ::placeholder {
+    color: #8a8a8a;
+}
