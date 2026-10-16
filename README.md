@@ -49,4 +49,7 @@ Para proporcionar uma experiência de navegação mais dinâmica e agradável, f
 
 ## 🔗 link do projeto
 
+
 ### https://bsinhorelli.github.io/vinheria-agnello/
+
+### figma: https://www.figma.com/design/NncdEuJRAnzUne5zYZ00Zx/Sem-t%25C3%25ADtulo?node-id=0-1&p=f&t=bRPSOsOYHVf0f8iR-0

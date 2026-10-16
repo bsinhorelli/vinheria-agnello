@@ -6,83 +6,177 @@
 /* importa os efeitos (pseudo-classes, animações, transições...) — @import precisa ficar no topo */
 @import url("efeitos.css");
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, b, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+b,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 
 
 
 
-
+/* configurações gerais */
 ::selection {
-  background-color: #3E1C00; 
-  color: #ffffff;            
+    background-color: #3E1C00;
+    color: #ffffff;
 }
-body{
+
+body {
     background-color: #000;
-    color: #ffffff; 
+    color: #ffffff;
     font-size: 1.5rem;
 }
-h1{
+
+h1 {
     font-size: 2.5rem;
     font-weight: 400;
     letter-spacing: 2px;
-    margin: 30;
+    margin: 30px;
     text-align: left;
 }
-h2{
+
+h2 {
     font-size: 1.8rem;
     font-weight: 400;
     letter-spacing: 2px;
     text-align: center;
 }
+
+
+/* Header */
 header {
     background-color: #000000;
-    color: #ffffff; 
+    color: #ffffff;
     padding: 40px 20px 0px 20px;
     text-align: center;
 }
+
 header h1 {
     font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
     font-size: 2.5rem;
@@ -91,17 +185,20 @@ header h1 {
     margin: 0 0 20px 0;
     text-align: center;
 }
+
 header nav ul {
-    list-style: none; 
+    list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
-header nav ul li{
+
+header nav ul li {
     padding: 10px;
 }
+
 header nav ul li a {
     color: #cccccc;
     text-decoration: none;
@@ -111,16 +208,24 @@ header nav ul li a {
     transition: color 0.3s ease;
 }
 
-.video{
+figcaption {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* configurações Video da pagina index */
+.video {
     position: relative;
     width: 100%;
     height: 100%;
     overflow: hidden;
 }
+
 .video video {
     width: 100%;
     height: 100%;
 }
+
 .btn {
     background-color: rgba(26, 21, 14, 0.7);
     color: #c5a880;
@@ -130,15 +235,15 @@ header nav ul li a {
 }
 
 .video .btn {
-    position:absolute;
+    position: absolute;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 
-
-.catalogo{
+/* configurações gerais para os catalogos*/
+.catalogo {
     padding: 60px 20px;
     text-align: center;
     display: flex;
@@ -149,42 +254,98 @@ header nav ul li a {
     gap: 40px;
     padding: 50px 20px 80px 20px;
 }
+
 .vinhos-catalogo {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    flex: 1 1 300px;           
-    max-width: 350px;          
+    flex: 1 1 300px;
+    max-width: 350px;
 }
+
 .vinhos-catalogo img {
     width: 100%;
     max-width: 320px;
     height: auto;
     margin-bottom: 25px;
 }
+
 .vinhos-catalogo h3 {
     font-size: 1.9rem;
     font-weight: 400;
     margin: 10px 0;
     letter-spacing: 1px;
 }
-.vinhos-catalogo p{
+
+.vinhos-catalogo p {
     line-height: 1.6;
     max-width: 290px;
     margin: 15px 0;
 }
 
-.notas-vinhos{
+.notas-vinhos {
     font-size: 1.2rem;
     color: #707070;
     letter-spacing: 1px;
     margin: 0 0 5px 0;
 }
 
-footer{
+
+/* configurações footer */
+footer {
     padding: 40px 20px;
     text-align: center;
     font-size: 1.2rem;
-    border-top: 1px solid #6f5b3f; 
+    border-top: 1px solid #6f5b3f;
+    margin-top: 80px;
+}
+
+
+/* configurações da pagina sobre */
+
+
+.sobre-nos h2 {
+    text-align: left;
+    margin-bottom: 50px;
+    /* line-height: 1.6; */
+}
+
+.quem-somos {
+
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 20px;
+}
+
+.quem-somos img {
+    margin-left: 10px;
+}
+
+.porque-escolher {
+    background-color: #0C0C0B;
+    padding: 8vh;
+    margin: 30px 0px;
+}
+
+.porque-escolher ul {
+    text-align: left;
+    color: #C8B99A;
+    gap: 30px;
+    display: flex;
+    flex: 1 1 300px;
+}
+
+.expansao-digital {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 30px;
+}
+
+.expansao-digital h2 {
+    margin: 50px;
+
 }
