@@ -308,7 +308,6 @@ footer {
 .sobre-nos h2 {
     text-align: left;
     margin-bottom: 50px;
-    /* line-height: 1.6; */
 }
 
 .quem-somos {
@@ -318,10 +317,17 @@ footer {
     align-items: center;
     text-align: left;
     gap: 20px;
+    position: relative;
 }
 
 .quem-somos img {
     margin-left: 10px;
+}
+
+.quem-somos p {
+    position: absolute;
+    top: 50%;
+    left: 40%;
 }
 
 .porque-escolher {
