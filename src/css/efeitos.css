@@ -13,7 +13,7 @@ header nav ul li a:hover {
 }
 
 /* contorno dourado em links e botoes ao navegar com Tab  */
-header nav ul li a:focus-visible, 
+header nav ul li a:focus-visible,
 .btn:focus-visible {
     outline: 2px solid #c5a880;
     outline-offset: 4px;
@@ -53,6 +53,7 @@ header nav ul li:not(:last-child)::after {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -60,17 +61,20 @@ header nav ul li:not(:last-child)::after {
 }
 
 /* aplica a animação "entrada" em cada card de vinho ao carregar a página */
-.vinhos-catalogo {
+.vinhos-catalogo,
+.img-catalogo {
     animation: entrada 0.8s ease-out backwards;
 }
 
 /* atraso por coluna (3 cards por linha): 2º, 5º, 8º... entram depois do 1º */
-.vinhos-catalogo:nth-child(3n + 2) {
+.vinhos-catalogo:nth-child(3n + 2),
+.img-catalogo:nth-child(3n + 2) {
     animation-delay: 0.2s;
 }
 
 /* 3º, 6º, 9º... entram por último, criando efeito cascata */
-.vinhos-catalogo:nth-child(3n + 3) {
+.vinhos-catalogo:nth-child(3n + 3),
+.img-catalogo:nth-child(3n + 3) {
     animation-delay: 0.4s;
 }
 
@@ -88,16 +92,19 @@ header nav ul li:not(:last-child)::after {
 }
 
 /* transformação translateY(): card sobe 8px ao passar o mouse */
-.vinhos-catalogo:hover {
+.vinhos-catalogo:hover,
+.img-catalogo:hover {
     transform: translateY(-8px);
 }
 
 /* transição: prepara a imagem para aumentar suavemente no hover */
-.vinhos-catalogo img {
+.vinhos-catalogo img,
+.img-catalogo {
     transition: transform 0.5s ease;
 }
 
 /* transformação scale(): imagem aumenta 5% quando o mouse passa sobre o card */
-.vinhos-catalogo:hover img {
+.vinhos-catalogo:hover img,
+.img-catalogo:hover {
     transform: scale(1.05);
 }
